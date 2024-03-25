@@ -1,0 +1,154 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap'); */
+/* @import url('https://fonts.cdnfonts.com/css/hvdtrial-brandon-grotesque'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
+
+* {
+    /* border: 1px solid red; */
+    /* font-family: 'Nova Square', sans-serif; */
+    /* font-family: 'Nunito', sans-serif; */
+    /* font-family: 'Montserrat', sans-serif; */
+    /* font-family: 'HvDTrial Brandon Grotesque', sans-serif; */
+    font-family: 'Quicksand', sans-serif;
+}
+
+.cont-head {
+    margin-top: 60px;
+}
+
+.cont-head span {
+    font-weight: bold;
+    /* color: rgb(0, 214, 214); */
+    color: rgb(172, 36, 81);
+}
+
+.cont-body {
+    margin: 0% 7% 0% 7%;
+    background-color: #73e47789;
+    border-radius: 25px;
+    box-shadow: 10px 10px 6px rgba(0, 0, 0, 0.25);
+}
+
+.content {
+    gap: 100px;
+}
+
+.left-side {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.left-side::before {
+    position: absolute;
+    top: 50%;
+    left: 19em;
+    content: '';
+    height: 60%;
+    width: 5px;
+    border-radius: 5px;
+    transform: translateY(-50%);
+    transition: 0.3s;
+    background: rgb(1, 112, 6);
+}
+
+.left-side .details {
+    margin: 15px;
+    text-align: center;
+}
+
+.left-side .details i {
+    font-size: 30px;
+    color: #3e2093;
+    margin-bottom: 10px;
+}
+
+.topic {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.text-one,
+.text-two {
+    padding: 5px;
+    font-size: 15px;
+    color: #5b5900;
+}
+
+.right-side {
+    padding: 0% 3% 0% 3%;
+}
+
+.topic-text {
+    font-size: 30px;
+    font-weight: bold;
+    color: #3e2093;
+}
+
+
+.input-box {
+    height: 50px;
+    margin: 7px 0px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    border-radius: 10px;
+    padding: 0px 15px;
+}
+
+textarea.form-control {
+    min-height: 150px;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+.button {
+    margin-top: 5px;
+    color: white;
+    font-size: 16px;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 10px;
+    background: #3e2093;
+}
+
+.button:hover {
+    background: #5029bc;
+}
+
+@media (max-width: 767px) {
+
+    .topic-text {
+        text-align: center;
+    }
+
+    .short-note {
+        text-align: center;
+    }
+
+    .content {
+        flex-direction: column-reverse;
+    }
+
+    .left-side {
+        width: 100%;
+    }
+
+    .left-side::before {
+        content: '';
+        position: absolute;
+        left: 20%;
+        top: -10%;
+        height: 5px;
+        width: 60%;
+        border-radius: 5px;
+        transform: translateY(-50%);
+        transition: 0.3s;
+        background: rgb(1, 112, 6);
+    }
+}

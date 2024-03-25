@@ -1,0 +1,29 @@
+.reg-head span {
+    font-weight: bold;
+    /* color: rgb(0, 214, 214); */
+    color: rgb(172, 36, 81);
+}
+
+.event-selected {
+    width: 100%;
+}
+
+.reg-body {
+    margin: 0% 7% 0% 7%;
+    background-color: #73e47789;
+    border-radius: 25px;
+    box-shadow: 10px 10px 6px rgba(0, 0, 0, 0.25);
+}
+
+.reg-input {
+    border-radius: 5px;
+    height: 36px;
+}
+
+.form-select {
+    width: 100%;
+}
+
+.reg-input {
+    font-size: 15px;
+}

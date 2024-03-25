@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registration</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="registration.css">
+</head>
+
+<body>
+    <!-- NAVBAR START -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand text-light ms-4 me-5 p-0" href="./index.html"><img src="./img/logo.png"
+                    alt="Momenta"></a>
+            <div class="sidebar offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+
+                <!-- Sidebar Header Start -->
+                <div class="offcanvas-header justify-content-end">
+                    <!-- Hamburger Menu Close Button Start -->
+                    <button type="button" class="btn-close btn-close-white shadow-none me-1 mt-1"
+                        data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    <!-- Hamburger Menu Close Button End -->
+                </div>
+                <!-- Sidebar Header End -->
+
+                <div class="offcanvas-body justify-content-end">
+
+                    <!-- Navbar Center Items Start -->
+                    <ul class="navbar-nav text-light">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <!-- Events Start -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Events
+                            </a>
+                            <!-- Events Dropdown Items Start -->
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="events.html">Glamour Gala</a></li>
+                                <li><a class="dropdown-item" href="events.html">Lens & Light</a></li>
+                                <li><a class="dropdown-item" href="events.html">Rhythm Rival</a></li>
+                                <li><a class="dropdown-item" href="events.html">Eatzz Fest</a></li>
+                                <li><a class="dropdown-item" href="events.html">Scaler Academy</a></li>
+                                <li><a class="dropdown-item" href="events.html">Cultural Carnival</a></li>
+                            </ul>
+                            <!-- Events Dropdown Items End -->
+                        </li>
+                        <!-- Events End -->
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Moments</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                    <!-- Navbar Center Items End -->
+
+                    <!-- Search Button Start -->
+                    <form class="search-form" role="search">
+                        <input class="form-control border-0 shadow-none" type="search" placeholder="Enter Keywords.."
+                            aria-label="Search">
+                        <button class="search-btn btn btn-success border-0" type="submit"><i class="fas fa-search"></i>
+                        </button>
+                    </form>
+                    <!-- Search Button End -->
+                </div>
+            </div>
+
+            <div class="d-flex">
+                <div class="login-signup">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+
+                <!-- Hamburger Button Start -->
+                <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon shadow-none border-0"></span>
+                </button>
+                <!-- Hamburger Button End -->
+            </div>
+        </div>
+    </nav>
+    <!-- NAVBAR END -->
+
+
+    <!-- REGISTRATION START -->
+    <!-- Registration Head Start -->
+    <div class="reg-head text-dark text-center mt-5 pt-4">
+        <h2>
+            Personal <span>Information</span>
+        </h2>
+    </div>
+    <!-- Registration Head End -->
+
+    <!-- Registration Body Start -->
+    <form class="reg-body p-5 row g-3 text-dark" action="registration" method="POST">
+        <div class="event-selected col-sm-12">
+            <label for="inputEvent" class="form-label">Event Selected</label>
+            <select name="event" id="inputEvent" class="form-select">
+                <!-- Options will be dynamically populated based on the query parameter -->
+            </select>
+        </div>
+        <div class="col-sm-6">
+            <label for="inputName" class="form-label">First Name *</label>
+            <input type="name" name="fname" class="reg-input form-control w-75" id="inputFirstName"
+                placeholder="Enter First Name">
+        </div>
+        <div class="col-sm-6">
+            <label for="inputName" class="form-label">Last Name</label>
+            <input type="name" name="lname" class="reg-input form-control w-75" id="inputLastName"
+                placeholder="Enter Last Name">
+        </div>
+        <div class="col-sm-6">
+            <label for="inputEmail" class="form-label">Email *</label>
+            <input type="email" name="email" class="reg-input form-control w-75" id="inputEmail4"
+                placeholder="Enter Email Address">
+        </div>
+        <div class="col-sm-6">
+            <label for="inputAddress" class="form-label">Address</label>
+            <textarea name="address" class="reg-input form-control w-75" id="inputAddress" placeholder="Enter Your Address"></textarea>
+        </div>
+        <div class="col-sm-6">
+            <label for="inputCity" class="form-label">City *</label>
+            <input type="text" name="city" class="reg-input form-control w-50" id="inputCity" placeholder="Enter City">
+        </div>
+        <div class="col-sm-4">
+            <label for="inputState" class="form-label">State *</label>
+            <select id="inputState" name="state" class="form-select w-75">
+                <option selected>Select State</option>
+                <option>Andhra Pradesh</option>
+                <option>Arunachal Pradesh</option>
+                <option>Assam</option>
+                <option>Bihar</option>
+                <option>Chhattisgarh</option>
+                <option>Goa</option>
+                <option>Gujarat</option>
+                <option>Haryana</option>
+                <option>Himachal Pradesh</option>
+                <option>Jammu and Kashmir</option>
+                <option>Jharkhand</option>
+                <option>Karnataka</option>
+                <option>Kerala</option>
+                <option>Madhya Pradesh</option>
+                <option>Maharashtra</option>
+                <option>Manipur</option>
+                <option>Meghalaya</option>
+                <option>Mizoram</option>
+                <option>Nagaland</option>
+                <option>Odisha</option>
+                <option>Punjab</option>
+                <option>Rajasthan</option>
+                <option>Sikkim</option>
+                <option>Tamil Nadu</option>
+                <option>Telangana</option>
+                <option>Tripura</option>
+                <option>Uttarakhand</option>
+                <option>Uttar Pradesh</option>
+                <option>West Bengal</option>
+                <option>Andaman and Nicobar Islands</option>
+                <option>Chandigarh</option>
+                <option>Dadra and Nagar Haveli</option>
+                <option>Daman and Diu</option>
+                <option>Delhi</option>
+                <option>Lakshadweep</option>
+                <option>Puducherry</option>
+            </select>
+        </div>
+        <div class="col-sm-6">
+            <label for="inputZip" class="form-label">Zip Code *</label>
+            <input type="text" name="zip" class="reg-input form-control w-50" id="inputZip"
+                placeholder="Enter Zip Code">
+        </div>
+        <div class="col-sm-4">
+            <label for="inputState" class="form-label">Add Guest *</label>
+            <select id="inputState" name="guest" class="form-select w-75">
+                <option selected>0</option>
+                <option>1</option>
+                <option>2</option>
+            </select>
+        </div>
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+    <!-- Registration Body End -->
+    <!-- REGISTRATION END -->
+
+
+    <!-- FOOTER START -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="row">
+                <div class="footer-col foot-company">
+                    <div class="footer-logo">
+                        <img src="./img/logo.png" alt="">
+                        <ul>
+                            <li>&copy; 2024 Momenta.Inc</li>
+                            <li>All Rights Reserved</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-col foot-useful-links">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col foot-contacts">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +91-7064512875 | +91-7894032948</li>
+                        <li><i class="fas fa-envelope"></i> chinmayapanda445@gmail.com</li>
+                        <li><i class="fas fa-envelope"></i> asishabhishek99@gmail.com</li>
+                        <li><i class="fas fa-location-dot"></i> Bhubaneswar, Odisha</li>
+                    </ul>
+                </div>
+
+                <div class="footer-col foot-social">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <!-- FOOTER END -->
+
+
+    <!-- JAVASCRIPT LINKS START -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+        </script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="script.js"></script>
+    <!-- JAVASCRIPT LINKS END -->
+</body>
+
+</html>
