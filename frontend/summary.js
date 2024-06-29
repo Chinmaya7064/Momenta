@@ -30,6 +30,7 @@ document.getElementById('rzp-button1').onclick = async function (e) {
           window.location.href = "registration.html"; // Redirect after successful payment
         } else {
           alert("Payment Failed! Please try again.");
+          
         }
       },
     };

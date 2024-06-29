@@ -60,7 +60,8 @@ const Info = new mongoose.model("Info", infoSchema)
 const LoginSchema = new mongoose.Schema({
     name: {
         type: String,
-        required: true
+        required: true,
+        unique: true
     },
     password: {
         type: String,

@@ -6,6 +6,7 @@ const bodyParser = require("body-parser");
 const Razorpay = require("razorpay");
 const cors = require("cors");
 const hbs = require("hbs");
+// const bcrypt = require('bcrypt');
 
 
 const templatePath = path.join(__dirname, './templates')
@@ -34,9 +35,15 @@ app.post("/signup", async (req, res) => {
         password: req.body.password,
         confirmPassword: req.body.Cpassword
     }
-    await User.insertMany([data])
-    res.redirect("index.html")
+    const checkuser = await User.findOne({name: req.body.name})
+    if(checkuser){
+        return res.send('<script>alert("User already Exists!"); window.location.href="/signup";</script>');
+    }else{
+        await User.insertMany([data])
+        res.redirect("index.html")
+    }
 })
+
 
 
 app.post("/login", async (req, res) => {
